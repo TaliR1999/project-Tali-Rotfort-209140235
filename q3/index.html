@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>  מערכת ניהול הצעות</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>הצעת מופע חדש</h1>
+
+        <nav class="nav-buttons">
+            <button onclick="location.href='index.html'">הגשת מופע</button>
+            <button onclick="location.href='manage.html'">ניהול הצעות</button>
+        </nav>
+
+        <form id="showForm">
+            <label for="title">שם האטרקציה:</label>
+            <input type="text" id="title" required />
+
+            <label for="emotion">הרגש המרכזי:</label>
+            <select id="emotion" required>
+                <option value="">בחר רגש</option>
+                <option>פחד</option>
+                <option>שמחה</option>
+                <option>בלבול</option>
+                <option>אהבה</option>
+                <option>עצב</option>
+            </select>
+
+            <label>האם מצריך השתתפות:</label>
+            <label><input type="radio" name="participation" value="כן" required />כן</label>
+            <label><input type="radio" name="participation" value="לא"/> לא</label>
+
+            <label for="epuipment">ציוד נדרש:</label>
+            <input type="text" id="equipment" />
+
+            <label for="intensity">דרגת אינטנסיביות: 1-5</label>
+            <input type="number" id="intensity" min="1" max="5" required />
+
+            <label for="ageLimit">מגבלת גיל</label>
+            <input type="number" id="ageLimit" required />
+
+            <label for="email">אימייל של יוצר הרעיון:</label>
+            <input type="email" id="email" required />
+
+            <button type="submit">שלח</button>
+        </form>
+
+        <div id="successMessage" style="display: none;">
+            ההצעה נשלחה בהצלחה!
+        </div>
+
+        <div id="showsList"></div>
+
+        <script src="script.js"></script>
+    
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ניהול הצעות</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <h1>מערכת ניהול הצעות</h1>
+
+         <nav class="nav-buttons">
+            <button onclick="location.href='index.html'">הגשת מופע</button>
+            <button onclick="location.href='manage.html'">ניהול הצעות</button>
+        </nav>
+
+
+        <section id="filters" class="filter-bar">
+            <label>
+                <select id="filterEmotion" onchange="filterByEmotion()">
+                    <option value="">הצג הכל</option>
+                    <option>פחד</option>
+                    <option>שמחה</option>
+                    <option>בלבול</option>
+                    <option>אהבה</option>
+                    <option>עצב</option>
+                </select>
+            </label>
+
+            <label>
+                סינון אינטנסיביות:
+                <input type="number" id="filterIntensity" min="1" max="5" onchange="filterByIntensity()" />
+            </label>
+
+           
+        </section>
+
+        <div id="showsList"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
